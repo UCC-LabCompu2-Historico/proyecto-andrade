@@ -5,6 +5,42 @@
     <title>Segunda</title>
 </head>
 <body>
+<h1>Analito </h1>
+<form>
+    <input id="analito" type="radio" name="analito" value="Base débil" onclick="mensaje()"> Base débil <br>
+    <input id="analito" type="radio" name="analito" value="Ácido débil" onclick="mensaje2()"> Ácido débil<br>
+    <label>volumen del analito</label>
+    <input id="volumen_analito" type="number" > mL
+    <label>volumen del titulante</label>
+    <input id="volumen_titulante" type="number" > mL
+    <label>concentración titulante</label>
+    <input id="concentracion_titulante" type="number"> M
+    <button type="button" onclick="calcular_concentracion()">Calcular</button>
 
+    </form>
+
+Seleccionaste: <span id="resultado">
+
+</span>
+<script>
+    function displayResult() {
+
+    }
+    function mensaje() {
+        document.getElementById("resultado").innerHTML = "Seleccionaste base débil" ;
+        }
+    function mensaje2() {
+        document.getElementById("resultado").innerHTML = "Seleccionaste ácido débil"
+        alert("seleccionaste ácido débil") ;
+
+    }
+    function calcular_concentracion() {
+        var volumen_analito= document.getElementById("volumen_analito").value;
+        var volumen_titulante=  document.getElementById("volumen_titulante").value;
+        var concentracion_titulante=  document.getElementById("concentracion_titulante").value;
+        var resultado=concentracion_titulante*volumen_titulante/volumen_analito;
+        document.getElementById("resultado").innerHTML = resultado;
+    }
+</script>
 </body>
 </html>

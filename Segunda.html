@@ -3,34 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Segunda</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="images/celeste2.gif">
 </head>
+<style>
+    body{
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+        font-size: 150%;
+        background-image: url("images/celeste2.gif");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    div{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 150px;
+        margin-left: 150px;
+</style>
 <body>
-<h1>Analito </h1>
-<form>
+<h1>¡Calculemos! </h1>
+
+<div>
+    <h2>
+        ¿Cuál es tu analito?
+    </h2>
+    <form>
     <input id="analito" type="radio" name="analito" value="Base débil" onclick="mensaje()"> Base débil <br>
     <input id="analito" type="radio" name="analito" value="Ácido débil" onclick="mensaje2()"> Ácido débil<br>
+
+    </form>
+    </div>
+<div>
+    <form>
     <label>volumen del analito</label>
-    <input id="volumen_analito" type="number" > mL
+    <input id="volumen_analito" type="number" > mL <br>
     <label>volumen del titulante</label>
-    <input id="volumen_titulante" type="number" > mL
+    <input id="volumen_titulante" type="number" > mL <br>
     <label>concentración titulante</label>
-    <input id="concentracion_titulante" type="number"> M
+    <input id="concentracion_titulante" type="number"> M <br>
+        </form>
+    </div>
+    <div><form>
     <button type="button" onclick="calcular_concentracion()">Calcular</button>
 
     </form>
-
-Seleccionaste: <span id="resultado">
+</div>
+La concentración <span id="seleccion"> </span> es <span id="resultado" >
 
 </span>
+
 <script>
     function displayResult() {
 
     }
     function mensaje() {
-        document.getElementById("resultado").innerHTML = "Seleccionaste base débil" ;
+        document.getElementById("seleccion").innerHTML = "de la base débil" ;
         }
     function mensaje2() {
-        document.getElementById("resultado").innerHTML = "Seleccionaste ácido débil"
+        document.getElementById("seleccion").innerHTML = "del ácido débil"
         alert("seleccionaste ácido débil") ;
 
     }
@@ -42,5 +73,6 @@ Seleccionaste: <span id="resultado">
         document.getElementById("resultado").innerHTML = resultado;
     }
 </script>
+
 </body>
 </html>

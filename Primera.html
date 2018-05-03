@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<br lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Primera</title>
@@ -17,19 +17,23 @@
         background-attachment: fixed;
         background-size: cover;
     }
+
     div{
-               margin-top: 50px;
+               margin-top: 20px;
         margin-bottom: 50px;
         margin-right: 150px;
         margin-left: 150px;
+        width: auto ;
+        border: 25px ;
+        padding: 25px;
     }
-    .titulo{
+
+    .titulo {
         font-size: 200%;
 
     }
-    .subtitulo{
+    .subtitulo {
         font-size: 160%;
-
     }
     .inst{
         background-color: #fff5f8;
@@ -37,7 +41,7 @@
     .inst2{
         background-color: #fff5f8;
     }
-    .segunda{
+    .segunda {
         font-weight: bold;
     }
     .cientifico{
@@ -47,11 +51,48 @@
         border-width: 100px;
         border-radius: 20px;
             }
+    .footer{
+        float: inherit;
+    }
+
+    ul {
+        display: inline-table;
+        list-style-type: none;
+        margin-top: 30px;
+        margin-bottom: 0px;
+        padding: 0;
+        width: 400px;
+        background-color: #f1f1f1;
+        border-color: black;
+    }
+
+    li a {
+        float: left;
+        display: inline-table;
+        color: black;
+        border-color: black;
+        padding: 10px 30px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+        li a:hover {
+        background-color: darkgrey;
+        color: lightskyblue;
+
+    }
 
 </style>
+<body>
 <div>
 <h1 class="titulo"> VALORACIONES </h1>
     <h2 class="subtitulo"> ÁCIDO-BASE</h2>
+    <ul>
+    <li><a href="Primera.html">Inicio</a></li>
+    <li><a href="Segunda.html">¡Calculemos!</a></li>
+        <li><a href="Autor.html">Autor</a></li>
+
+</ul>
         </div>
 <div class="inst">
 La <b>valoración ácido-base</b> es el proceso mediante el cual se determina la concentració
@@ -70,6 +111,7 @@ La <b>valoración ácido-base</b> es el proceso mediante el cual se determina la
 <div class="segunda">
 <a href="Segunda.html" title="Cálculos">Vamos a calcular!</a>
     </div>
+<footer class="footer">Ayelén Stefanía Andrade</footer>
 
 </body>
 </html>

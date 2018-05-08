@@ -5,6 +5,7 @@
     <title>Segunda</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="images/celeste2.gif">
+    <link rel="icon" href="images/erlen">
 </head>
 <style>
     body{
@@ -62,7 +63,7 @@
 <ul>
     <li><a href="Primera.html">Inicio</a></li>
     <li><a href="Segunda.html">¡Calculemos!</a></li>
-    <li><a href="">Autor</a></li>
+    <li><a href="Autor.html">Autor</a></li>
 </ul>
 <h1>¡Calculemos! </h1>
 <div>
@@ -78,9 +79,27 @@
 <div>
     <form>
     <label>volumen del analito</label>
-    <input id="volumen_analito" type="number" > mL <br>
+    <input id="volumen_analito" type="number" >
+        <select name="volumen2">
+
+        <option>mL</option>
+
+        <option>dL</option>
+
+        <option>L</option>
+
+    </select> <br>
     <label>volumen del titulante</label>
-    <input id="volumen_titulante" type="number" > mL <br>
+    <input id="volumen_titulante" type="number" >
+        <select name="volumen1">
+
+            <option>mL</option>
+
+            <option>dL</option>
+
+            <option>L</option>
+
+        </select><br>
     <label>concentración titulante</label>
     <input id="concentracion_titulante" type="number"> M <br>
         </form>
@@ -95,10 +114,9 @@
 </canvas>
     </div>
 <div class="conc">
-La concentración <span id="seleccion"> </span> es <span id="resultado" >
+La concentración <span id="seleccion"> </span> es <span id="resultado" > </span>
     </div>
 
-</span>
 
 <footer class="nombre">Ayelén Stefanía Andrade</footer>
 

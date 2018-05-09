@@ -1,0 +1,50 @@
+body{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 150%;
+    background-image: url("images/celeste2.gif");
+    background-attachment: fixed;
+    background-size: cover;
+}
+div{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-right: 150px;
+    margin-left: 150px;
+    width: auto ;
+    border: 20px ;
+    padding: 20px;
+}
+ul {
+    display: inline-table;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 0;
+    width: 425px;
+    background-color: #f1f1f1;
+    border-color: black;
+}
+
+li a {
+    float: left;
+    display: inline-table;
+    color: black;
+    border-color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+li a:hover {
+    background-color: darkgrey;
+    color: lightskyblue;
+
+}
+.nombre {
+    float: inherit;
+}
+.conc{
+    background-color: #fff5f8;
+    width: auto;
+}

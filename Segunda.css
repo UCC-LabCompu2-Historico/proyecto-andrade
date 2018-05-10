@@ -1,4 +1,3 @@
-
 body{
     text-align: center;
     font-family: 'Indie Flower', cursive;
@@ -7,17 +6,14 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-div{align-content: center;
+div{
     margin-top: 50px;
     margin-bottom: 20px;
-    margin-right: 450px;
-    margin-left: 450px;
-    width: 300px ;
+    margin-right: 150px;
+    margin-left: 150px;
+    width: auto ;
     border: 20px ;
     padding: 20px;
-    background-color: #fff5f8;
-    text-align: center;
-
 }
 ul {
     display: inline-table;
@@ -44,5 +40,11 @@ li a:hover {
     background-color: darkgrey;
     color: lightskyblue;
 
-
+}
+.nombre {
+    float: inherit;
+}
+.conc{
+    background-color: #fff5f8;
+    width: auto;
 }

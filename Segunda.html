@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link rel="icon" href="images/Erlenmeyer.png">
     <link rel="stylesheet" href="Segunda.css">
+
 </head>
 
 <body>
@@ -62,26 +63,38 @@
 
     </form>
 </div>
-<div><canvas id=canvas width="300" height="150" style="border:1px solid #d3d3d3; background-color: #fff5f8; text-align: center">
+<div>
+
+    <canvas id="canvas" width="170" height="250" style="border:1px solid #d3d3d3; background-color: #fff5f8; text-align: center">
+
 </canvas>
     </div>
+
 <div class="conc">
-La concentración <span id="seleccion"> </span> es <span id="resultado" > </span>
+La concentración <span id="seleccion"> </span> es <span id="resultado" > </span> M
     </div>
 
 
 <footer class="nombre">Ayelén Stefanía Andrade</footer>
 
 <script>
-    var c = document.getElementById("canvas");
-    var ctx = c.getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.fillText("Gráfico de cálculos",10,50)
 
-    function displayResult() {
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
 
-    }
-    function mensaje() {
+        var img = new Image();
+        img.src = "images/Erlenmeyer2.png";
+        img.onload = function () {
+            ctx.drawImage(img, 0, 0, 170, 250);
+
+        }
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+
+
+     function mensaje() {
         document.getElementById("seleccion").innerHTML = "de la base débil" ;
         }
     function mensaje2() {
@@ -97,6 +110,8 @@ La concentración <span id="seleccion"> </span> es <span id="resultado" > </span
         document.getElementById("resultado").innerHTML = resultado;
     }
 </script>
+
+
 
 </body>
 </html>

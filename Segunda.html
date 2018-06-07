@@ -77,24 +77,40 @@ La concentración <span id="seleccion"> </span> es <span id="resultado" > </span
 
 <footer class="nombre">Ayelén Stefanía Andrade</footer>
 
-<script>
+<script type="text/javascript">
 
-        var c = document.getElementById("canvas");
-        var ctx = c.getContext("2d");
+            var c = document.getElementById("canvas");
+            var ctx = c.getContext("2d");
 
-        var img = new Image();
-        img.src = "images/Erlenmeyer2.png";
-        img.onload = function () {
-            ctx.drawImage(img, 0, 0, 170, 250);
+            var img = new Image();
+            img.src = "images/Erlenmeyer2.png";
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0, 170, 250);
 
-        }
-        ctx.globalCompositeOperation = 'destination-over';
-        ctx.moveTo(0, 0);
-        ctx.lineTo(200, 100);
-        ctx.stroke();
+            }
+            ctx.globalCompositeOperation = 'destination-over';
+
+            ctx.beginPath();
+            ctx.moveTo(140, 242);
+            ctx.lineTo(33, 242);
+            ctx.moveTo(33, 242);
+            ctx.lineTo(18, 220);
+            ctx.moveTo(18, 220);
+            ctx.lineTo(75, 35);
+            ctx.moveTo(75, 35);
+            ctx.lineTo(93, 35);
+            ctx.moveTo(93, 35);
+            ctx.lineTo(152, 215);
+            ctx.moveTo(152, 215);
+            ctx.lineTo(140, 242);
+
+            
+
+            ctx.stroke();
 
 
-     function mensaje() {
+
+        function mensaje() {
         document.getElementById("seleccion").innerHTML = "de la base débil" ;
         }
     function mensaje2() {

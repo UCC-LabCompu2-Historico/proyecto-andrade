@@ -33,36 +33,36 @@
 <div>
     <form>
         <label>volumen del analito</label>
-        <input id="volumen_analito" type="number">
-        <select name="volumen2">
+        <input id="volumen_analito" type="number" />
+        <select id="volumen2">
 
-            <option id="mL1">mL</option>
+            <option value="1">mL</option>
 
-            <option>dL</option>
+            <option value="100">dL</option>
 
-            <option>L</option>
+            <option value="1000">L</option>
 
         </select> <br>
         <label>volumen del titulante</label>
-        <input id="volumen_titulante" type="number">
+        <input id="volumen_titulante" type="number" />
         <select id="volumen1">
 
-            <option id="mL">mL</option>
+            <option value="1">mL</option>
 
-            <option id="dL">dL</option>
+            <option value="100">dL</option>
 
-            <option id="L">L</option>
+            <option value="1000">L</option>
 
         </select><br>
         <label>concentración titulante</label>
-        <input id="concentracion_titulante" type="number"> Molar <br>
+        <input id="concentracion_titulante" type="number" /> Molar <br>
     </form>
 </div>
 
 <div>
     <form>
         <button type="button" onclick="calcular_concentracion()">Calcular</button>
-        <!-- agregar el onclick para el canvas -->
+        
 
     </form>
 </div>

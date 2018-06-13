@@ -4,70 +4,77 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-var img = new Image();
-img.src = "images/Erlenmeyer2.png";
-img.onload = dibujar;
+
+var cantidad = 0;
+var max_cant = 0;
 
 function dibujar(cantidad) {
 
     //ctx.globalCompositeOperation = 'destination-over';
+    ctx.clearRect(0,0,canvas.width, canvas.height);
 
     ctx.beginPath() ;
-        ctx.moveTo(140, 242);
-        ctx.lineTo(33, 242);
-        ctx.moveTo(33, 242);
-        ctx.lineTo(18, 220);
-        ctx.moveTo(18, 220);
-        ctx.lineTo(75, 35);
-        ctx.moveTo(75, 35);
-        ctx.lineTo(93, 35);
-        ctx.moveTo(93, 35);
-        ctx.lineTo(152, 215);
-        ctx.moveTo(152, 215);
-        ctx.lineTo(140,242);
+        ctx.moveTo(30, 245);
+        ctx.lineTo(140, 245);
+        ctx.moveTo(30, 245);
+        ctx.lineTo(30, 100);
+        ctx.moveTo(140, 245);
+        ctx.lineTo(140, 130);
+        ctx.moveTo(140, 130);
+        ctx.lineTo(160, 100);
+        ctx.moveTo(30, 100);
+        ctx.lineTo(160, 100);
     ctx.stroke();
     ctx.closePath();
+
+    max_cant = cantidad*30;
     
-    ctx.drawImage(img, 0, 0, 170, 250);
+    //x.drawImage(img, 0, 0, 170, 250);
 
-
+    setInterval(animar, 100);
 }
-function mensaje() {
-    document.getElementById("seleccion").innerHTML = "de la base débil";
-}
-function mensaje2() {
-    document.getElementById("seleccion").innerHTML = "del ácido débil";
-    alert("seleccionaste ácido débil");
 
+function animar(){
+    ctx.beginPath();
+    ctx.fillStyle = "#fff000";
+    ctx.fillRect(31, 244, 108, -cantidad);
+    ctx.closePath();
+
+    ctx.beginPath() ;
+    for(var i = 0; i < 12; i++){
+        ctx.moveTo(30, 230 - (i*10));
+        ctx.lineTo(40, 230 - (i*10));
+    }
+    ctx.stroke();
+    ctx.closePath();
+
+    if(cantidad < max_cant && cantidad < 100)
+            cantidad++;
 }
 
 function calcular_concentracion() {
-    /* if (mL2) {
-
-     }
-     volumen_analito= document.getElementById("mL").value;
-     NO SE COMO HACER QUE SI AMBOS VOLUMENES SON IGUALES, QUE SE HAGA LA CUENTA IGUAL
-     */
+     
     if (isNaN(document.getElementById("volumen_analito").value) || isNaN(document.getElementById("volumen_titulante").value) || isNaN(document.getElementById("concentracion_titulante").value)) {
         alert("solo se puede ingresar numeros");
 
     }
     else {
-        var dL = document.getElementById(dL).value;
-        var L = document.getElementById(L).value;
-        var mL = document.getElementById(mL).value;
-        if ( dL)
-            volumen_titulante = volumen_titulante * 100;
-        else if (volumen_titulante == L)
-            volumen_titulante = volumen_titulante * 1000;
-        /*else if (volumen_titulante = mL)
-            volumen_titulante = volumen_titulante;*/
+
 
 
         var volumen_analito = document.getElementById("volumen_analito").value;
         var volumen_titulante = document.getElementById("volumen_titulante").value;
+        var volumen1 = document.getElementById("volumen1").value;
+        var volumen2 = document.getElementById("volumen2").value;
         var concentracion_titulante = document.getElementById("concentracion_titulante").value;
-        var resultado = concentracion_titulante * volumen_titulante / volumen_analito;
-        document.getElementById("resultado").innerHTML = resultado;
+        console.log(parseFloat(concentracion_titulante));
+        console.log(parseFloat(volumen_titulante*volumen1));
+        console.log(parseFloat(volumen_analito*volumen2));
+        var result = parseFloat(concentracion_titulante) * parseFloat(volumen_titulante*volumen1) / parseFloat(volumen_analito*volumen2);
+        console.log(result);
+        document.getElementById("resultado").innerHTML = result;
+
+        dibujar(volumen_titulante*volumen1);
     }
 
+}

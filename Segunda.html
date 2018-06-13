@@ -16,122 +16,70 @@
     <li><a href="Autor.html">Autora</a></li>
 </ul>
 <header>
-<h1>¡Calculemos! </h1>
-<div>
-    <h2>
-        ¿Cuál es tu analito?
-    </h2>
+    <h1>¡Calculemos! </h1>
+    <div>
+        <h2>
+            ¿Cuál es tu analito?
+        </h2>
+    </div>
 </header>
 
-    <form>
-    <input id="analito" type="radio" name="analito" value="Base débil" onclick="mensaje()"> Base débil <br>
-    <input id="analito" type="radio" name="analito" value="Ácido débil" onclick="mensaje2()"> Ácido débil<br>
+<form>
+    <input type="radio" name="analito_b" value="Base débil" onclick="mensaje()"> Base débil <br>
+    <input type="radio" name="analito_a" value="Ácido débil" onclick="mensaje2()"> Ácido débil<br>
 
-    </form>
-    </div>
+</form>
+</div>
 <div>
     <form>
-    <label>volumen del analito</label>
-    <input id="volumen_analito" type="number" >
+        <label>volumen del analito</label>
+        <input id="volumen_analito" type="number">
         <select name="volumen2">
 
-        <option id="mL1">mL</option>
-
-        <option>dL</option>
-
-        <option>L</option>
-
-    </select> <br>
-    <label>volumen del titulante</label>
-    <input id="volumen_titulante" type="number" >
-        <select name="volumen1">
-
-            <option id="mL2">mL</option>
+            <option id="mL1">mL</option>
 
             <option>dL</option>
 
             <option>L</option>
 
-        </select><br>
-    <label>concentración titulante</label>
-    <input id="concentracion_titulante" type="number"> Molar <br>
-        </form>
-    </div>
+        </select> <br>
+        <label>volumen del titulante</label>
+        <input id="volumen_titulante" type="number">
+        <select id="volumen1">
 
-    <div><form>
-    <button type="button" onclick="calcular_concentracion()">Calcular</button>   <!-- agregar el onclick para el canvas -->
+            <option id="mL">mL</option>
+
+            <option id="dL">dL</option>
+
+            <option id="L">L</option>
+
+        </select><br>
+        <label>concentración titulante</label>
+        <input id="concentracion_titulante" type="number"> Molar <br>
+    </form>
+</div>
+
+<div>
+    <form>
+        <button type="button" onclick="calcular_concentracion()">Calcular</button>
+        <!-- agregar el onclick para el canvas -->
 
     </form>
 </div>
 <div>
 
-    <canvas id="canvas" width="170" height="250" style="border:1px solid #d3d3d3; background-color: #fff5f8; text-align: center">
+    <canvas id="canvas" width="170" height="250"
+            style="border:1px solid #d3d3d3; background-color: #fff5f8; text-align: center">
 
-</canvas>
-    </div>
+    </canvas>
+</div>
 
 <div class="conc">
-La concentración <span id="seleccion"> </span> es <span id="resultado" > </span> M
-    </div>
-
+    La concentración <span id="seleccion"> </span> es <span id="resultado"> </span> M
+</div>
+<script src="canvas.js"></script>
 
 <footer class="nombre">Ayelén Stefanía Andrade</footer>
-<script src="canvas.js">
-
-    var c = document.getElementById("canvas");
-    var ctx = c.getContext("2d");
-
-    var img = new Image();
-    img.src = "images/Erlenmeyer2.png";
-    img.onload = function () {
-        ctx.drawImage(img, 0, 0, 170, 250);
-
-    }
-    ctx.globalCompositeOperation = 'destination-over';
-
-    ctx.beginPath();
-    ctx.moveTo(140, 242);
-    ctx.lineTo(33, 242);
-    ctx.moveTo(33, 242);
-    ctx.lineTo(18, 220);
-    ctx.moveTo(18, 220);
-    ctx.lineTo(75, 35);
-    ctx.moveTo(75, 35);
-    ctx.lineTo(93, 35);
-    ctx.moveTo(93, 35);
-    ctx.lineTo(152, 215);
-    ctx.moveTo(152, 215);
-    ctx.lineTo(140, 242);
-
-
-
-    ctx.stroke();
-
-</script>
-
-<script>
-        function mensaje() {
-        document.getElementById("seleccion").innerHTML = "de la base débil" ;
-        }
-    function mensaje2() {
-        document.getElementById("seleccion").innerHTML = "del ácido débil";
-        alert("seleccionaste ácido débil") ;
-
-    }
-    function calcular_concentracion() {
-       <!-- if (mL2) {
-
-        }
-            volumen_analito= document.getElementById("mL").value;
-            NO SE COMO HACER QUE SI AMBOS VOLUMENES SON IGUALES, QUE SE HAGA LA CUENTA IGUAL
-            -->
-        var volumen_analito= document.getElementById("volumen_analito").value;
-        var volumen_titulante=  document.getElementById("volumen_titulante").value;
-        var concentracion_titulante=  document.getElementById("concentracion_titulante").value;
-        var resultado=concentracion_titulante*volumen_titulante/volumen_analito;
-        document.getElementById("resultado").innerHTML = resultado;
-    }
-</script>
 
 
 

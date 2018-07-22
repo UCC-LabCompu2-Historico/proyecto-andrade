@@ -19,6 +19,13 @@ div{align-content: center;
     text-align: center;
 
 }
+
+#header {
+    font-family: 'Indie Flower', cursive;
+    font-size: 200%;
+    text-align: center;
+    text-decoration-line: underline;}
+
 ul {
     display: inline-table;
     list-style-type: none;

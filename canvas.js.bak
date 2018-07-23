@@ -31,12 +31,7 @@ function dibujar(cantidad) {
 
 dibujar(10);
 
-function mensaje() {
-    document.getElementById("seleccion").innerHTML = "de la base débil";
-}
-function mensaje2() {
-    document.getElementById("seleccion").innerHTML = "del ácido débil";
-    alert("seleccionaste ácido débil");
+
 
 }
 

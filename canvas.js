@@ -74,11 +74,11 @@ function calcular_concentracion() { //llama a la funcion calcular_concentracion 
         var volumen1 = document.getElementById("volumen1").value; //llama al elemento 'volumen1' y lo asigna a la variable volumen1
         var volumen2 = document.getElementById("volumen2").value; //llama al elemento 'volumen2' y lo asigna a la variable volumen2
         var concentracion_titulante = document.getElementById("concentracion_titulante").value; //llama al elemento 'concentracion_titulante' y lo asigna a la variable concentracion_titulante
-        console.log(parseFloat(concentracion_titulante));  //console.log se utiliza para ver en el browser si existe algun error las distintas variables
-        console.log(parseFloat(volumen_titulante*volumen1)); //toma el valor obtenido de la operacion como variable float (con decimales)
+        console.log(parseFloat(concentracion_titulante));  //imprime en consola un mensaje
+        console.log(parseFloat(volumen_titulante*volumen1)); //toma el valor obtenido de la operacion como variable float
         console.log(parseFloat(volumen_analito*volumen2));
         var result = parseFloat(concentracion_titulante) * parseFloat(volumen_titulante*volumen1) / parseFloat(volumen_analito*volumen2); //asigna a la variable 'result' el valor de la operacion final
-        console.log(result); //verifica si hay algun error en la variable 'result'
+        console.log(result); 
         document.getElementById("resultado").innerHTML = result; //llama al elemento html 'resultado' y le asigna la variable resultado
 
         dibujar(volumen_titulante*volumen1); //llama a la funcion dibujar segun el valor del calculo volumen_titulante*volumen1

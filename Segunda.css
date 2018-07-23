@@ -1,3 +1,4 @@
+
 body{
     text-align: center;
     font-family: 'Indie Flower', cursive;
@@ -5,6 +6,19 @@ body{
     background-image: url("images/celeste2.gif");
     background-attachment: fixed;
     background-size: cover;
+}
+#head {
+    font-family: 'Indie Flower', cursive;
+    font-size: 200%;
+    text-align: center;
+    text-decoration-line: underline;
+}
+#head2 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 150%;
+    text-align: center;
+    text-decoration-line: none;
+
 }
 div{
     margin-top: 50px;
